@@ -1,1 +1,1 @@
-# e-parceiros
+npm install package-json
