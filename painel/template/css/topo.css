@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:#e8e4d9;
+	margin:0;
+}
+#topo{
+	background:url(../imgs/fundo.png) no-repeat;
+	margin:0 auto;
+	width:1178px;
+	padding-top:100px;
+}
+
+#topo_barra{
+	margin:0 auto;
+	background:url(../imgs/topo_barra.png) no-repeat bottom;
+	height:111px;
+	width:982px;
+}
+
+#topo_infos{
+	background-image:url(../imgs/topo_info.png);
+	height:49px;
+	width:396px;
+	float:right;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left:18px;
+	padding-top:10px;
+}

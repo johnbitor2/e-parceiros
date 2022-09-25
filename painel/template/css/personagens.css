@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+#todo{
+	width:680px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#todo h3{
+	color:#9f9f9f;
+	display:inline;
+}
+
+#todo .detalhes{
+	float:right; color:#999191; font-style:italic; padding-right:5px; cursor:pointer;
+}
+
+#personagens td{
+	background-color:#f2f2f2;
+}
+
+#infos{
+}
+
+.info{
+    color:#8f8f8f;
+}
+
+#infos_personagen{
+	float:left;
+}
+#infos_clan{
+	padding-left:40px;
+	float:left;
+}
+
+#medalhas{
+}
+
+#medalha{
+	font-size:12px;
+	float:left;
+	padding-left:15px;
+}
+
+#loading{
+	display:none;
+}
+
+
+#div{
+	background:url(../imgs/principal_div.png) no-repeat;
+	height:5px;
+	width:657px;
+	margin-top:25px;
+}

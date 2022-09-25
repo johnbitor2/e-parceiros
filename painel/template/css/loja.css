@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+
+#todo{
+	width:696px;
+	font-family:Arial, Helvetica, sans-serif;
+        
+}
+
+#todo h3{
+	color:#9f9f9f;
+	display:inline;
+}
+
+#item{
+    background: url(../imgs/loja_box.png) no-repeat;
+    height: 109px;
+    width: 340px;
+    float: left;
+    padding-left: 8px;
+    margin-top: 8px;
+}
+
+#imgbox{
+    background: url(../imgs/loja_img_box.png) no-repeat;
+    height: 88px;
+    width: 96px;
+    margin-top: 9px;
+    padding-left: 3px;
+    padding-top: 3px;
+    float: left;
+}
+
+#separador{
+    background: url(../imgs/loja_separa.png) no-repeat;
+    height: 99px;
+    width: 1px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#nome{
+    width: 213px;
+    height: 20px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 8px;
+    color: #4b3737;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+#descricao{
+    width: 213px;
+    height: 47px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 3px;
+    color: #4b3737;
+    font-size: 11px;
+}
+
+#ecoin{
+    background: url(../imgs/loja_coin.png) left bottom no-repeat;
+    width: 50px;
+    height: 15px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 7px;
+    color: #4b3737;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+#compra{
+    background: url(../imgs/loja_comprar.png) no-repeat;
+    width: 67px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 78px;
+    float: left;
+}
+
+#compra:hover{
+    background: url(../imgs/loja_comprar_hover.png) no-repeat;
+    width: 67px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 78px;
+    float: left;
+    cursor: pointer;
+}
+
+#loja_aviso{
+    background: url(../imgs/loja_aviso.png);
+    height: 31px;
+    width: 690px;
+    color: #e9e79a;
+    font-size: 15px;
+    padding-top: 13px;
+    text-align: center;
+}
+
+#loja_aviso a{
+    text-decoration: none;
+    color: #e9e79a;
+}
+
+#loja_aviso a:hover{
+    text-decoration: underline;
+    color: #e9e79a;
+}

@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+#center{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-258px;
+	margin-top:-190px; /* com 20 da barra */
+	width:516px;
+	height:341px;
+}
+
+#bar{
+	margin-top:20px;
+	padding-bottom:18px;
+	background:url(../imgs/login_barra.png) no-repeat;
+	height:1px;
+	width:515px;
+}
+
+#logo1{
+	padding-bottom:18px;
+	width:516px;
+}
+
+#logo2{
+	margin:0 auto;
+	background:url(../imgs/login_logo.png) no-repeat;
+	height:87px;
+	width:220px;
+}
+
+#buttons{
+	float:right;
+}
+
+.bt_entrar {
+	cursor:pointer; cursor:hand;
+	height:31px;
+	width:87px;
+	background: url(../imgs/login_entrar.png) no-repeat;
+	vertical-align:middle;
+	margin:1px;
+}
+
+.bt_entrar:hover {
+	cursor:pointer; cursor:hand;
+	background:url(../imgs/login_entrar2.png);
+}
+
+.bt_cadastra {
+	cursor:pointer; cursor:hand;
+	height:31px;
+	width:124px;
+	background: url(../imgs/login_cadastre.png) no-repeat;
+	vertical-align:middle;
+	margin:1px;
+}
+
+
+.bt_cadastra:hover {
+	cursor:pointer; cursor:hand;
+	background:url(../imgs/login_cadastre2.png);
+}
+
+#center .main_input_box { 
+	margin:0 auto; text-align:center; font-size:13px;
+	padding-top:13px;
+	}
+#center .main_input_box input{ height:30px; border:0px; display:inline-block; width:60%; line-height:28px;  margin-bottom:3px;}
+
+#center .main_input_box .add-on{  padding:8px 8px; *line-height:30px; width:30px; display:inline-block;}
+.bg_lg{ background:url(../imgs/login_user.png);}
+.bg_lg2{ background:url(../imgs/login_pass.png);}
+
+.clique{
+	font-style:italic;
+	font-weight:bold;
+	text-decoration:none;
+	color:#8a8a8a;
+}
+.clique:hover{
+	font-style:italic;
+	font-weight:bold;
+	text-decoration:underline;
+	color:#8a8a8a;
+}

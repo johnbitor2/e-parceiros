@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+#gambs{
+    margin:0 auto;
+    width:1178px;
+}
+
+#conteudo{
+	margin:0 auto;
+	width:965px;
+}
+
+#conteudo2{
+	background:#fdfdfd;
+	width:707px;
+	height:600px;
+	float:right;
+        padding-top: 30px;
+        padding-left: 25px;
+}
+
+#menu{
+	float:left;
+	width:231px;
+	margin:0 auto;
+}
+
+#menu a{
+    text-decoration:none;
+}
+
+#menu_topo{
+	background:url(../imgs/menu_topo.png);
+	width:231px;
+	height:36px;
+}
+
+#menu_item{
+	background:url(../imgs/menu_item.png);
+	width:216px;
+	height:27px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#827d6d;
+	padding-left:15px;
+	padding-top:10px;
+}
+
+#menu_item:hover{
+	color:#585241;
+}
+
+#menu_subitem{
+	background:url(../imgs/menu_subitem.png) no-repeat #f2f2f2;
+	width:204px;
+	height:24px;
+	padding-left:25px;
+	padding-top:8px;
+}
+
+#menu_subitem2{
+	border:thin;
+	border-color:#888;
+	border-style: solid;
+	background:#f2f2f2;
+	display:none;
+}
+
+#menu_subitem2 a{
+	text-decoration:none;
+	color:#9f9f9f;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	
+}
+
+.slideloja{}
+.slidesuporte{}
