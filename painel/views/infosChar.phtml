@@ -1,0 +1,50 @@
+<?php
+    $v_params = $this->getParams();
+    $o_charInfo = $v_params["char"];
+    $o_clanInfo = $v_params["clan"];
+    $v_medalhasInfo = $v_params["medalhas"];
+?>
+        <div style="height:135px;">
+            <div id="infos_personagen">
+                <h3>Informações do Personagem</h3><p>
+                <div style="float:left;"><img src="<?php echo $o_charInfo->getSt_head(); ?>" /></div>
+                <div style=" padding-left:10px; float:left;">
+                    <span class="info">Nick:</span> <?php echo $o_charInfo->getSt_charName(); ?><br />
+                    <span class="info">Level:</span> <?php echo $o_charInfo->getIn_lvl(); ?><br />
+                    <span class="info">Classe:</span> <?php echo $o_charInfo->getSt_classe(); ?><br />                  
+                        <span class="info">BP:</span> &nbsp; <span class="info">Deaths:</span> <br />
+                    <span class="info">KD:</span>  <br />
+                </div>
+            </div>
+            <?php if(strlen($o_clanInfo->getSt_clanName())>0){ ?>
+            <div id="infos_clan">
+                <h3>Informações do Clan</h3><p>
+                <div style="float:left;">
+                	<img src="" width="32px" height="32px"  />
+                </div>
+                <div style=" padding-left:10px; float:left;">
+                    <?php echo $o_clanInfo->getSt_clanName(); ?> <br />
+                    <span style="font-size:12px;">"<?php echo $o_clanInfo->getSt_frase(); ?>"</span>
+                </div><br /><br />
+                <span class="info">Lider:</span> <?php echo $o_clanInfo->getSt_lider(); ?><br />
+                <span class="info">Sub-Líder:</span> <?php echo $o_clanInfo->getSt_viceLider(); ?><br />
+                <span class="info">Membros:</span> <?php echo $o_clanInfo->getIn_numMem(); ?>
+            </div>
+            <?php } ?>
+        </div>
+     
+     	<div id="div"></div><p>
+     
+        <div id="medalhas">
+            <h3>Medalhas</h3><p>
+                <?php foreach($v_medalhasInfo as $o_medalha) { ?>
+                
+            <div id="medalha">
+            	<table>
+                    <tr bgcolor="#f2f2f2"><td><img src="<?php echo $o_medalha->getSt_img(); ?>" /></td></tr>
+                    <tr><td><?php echo $o_medalha->getSt_nome(); ?></td></tr><tr><td style="color:#989898;"><?php echo $o_medalha->getDt_data(); ?></td></tr>
+                </table>
+            </div>
+            
+                <?php } ?>
+        </div>

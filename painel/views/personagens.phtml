@@ -1,0 +1,95 @@
+<?php
+    $v_params = $this->getParams();
+    $v_charInfo = $v_params["char"];
+    $v_clanInfo = $v_params["clan"];
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Painel E-PARCEIROS - Personagens</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/personagens.css" />
+<script>
+function showHint(str)
+{
+	var xmlhttp;
+	if (str.length==0)
+	{ 
+	  document.getElementById("infos").innerHTML="";
+	  return;
+	}
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+	  xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function(){
+		if (xmlhttp.readyState==1)
+		{
+			document.getElementById("loading").style.display = "block";
+		}
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("loading").style.display = "none";
+			document.getElementById("infos").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","/Painel/Char/info/name/"+str,true);
+	xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<?php 
+    require_once 'views/topo.phtml';
+    require_once 'views/menu.phtml';
+?>
+    
+<div id="todo">
+    
+    <div id="personagens">
+    <h3>Personagens</h3><p>
+    <table>
+        <?php 
+            $i = 0;
+            foreach ($v_charInfo as $o_infoChar)
+            {
+        ?>
+        <tr>
+            <td width="300"><?php echo $o_infoChar->getSt_charName(); ?> <span class="detalhes" onclick="showHint('<?php echo $o_infoChar->getSt_charName(); ?>')">+ Detalhes</span></td>
+            <td width="50" align="center"><?php echo $o_infoChar->getIn_lvl(); ?></td>
+            <td width="110" align="center"><?php echo $o_infoChar->getSt_classe(); ?></td>
+            <td width="150" align="center">
+                <?php 
+                    if(strlen($v_clanInfo[$i]->getSt_clanName())>0){
+                        echo $v_clanInfo[$i]->getSt_clanName();
+                    } else{ echo "Nenhum"; } 
+                    $i++;
+                ?>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    </div>
+    
+    <div id="div"></div><p>
+    
+    <div id="loading"><img width="64px" height="64px" src="/Painel/template/imgs/Loading.gif"></div>
+    
+    <div id="infos">
+
+    </div>
+
+</div>
+
+    
+
+    
+</div>
+</div>
+</div>
+</body>
+</html>

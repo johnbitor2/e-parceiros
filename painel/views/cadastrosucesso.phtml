@@ -1,0 +1,30 @@
+<?php
+    $v_params = $this->getParams();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Painel E-PARCEIROS - Cadastro</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/cadastro.css" />
+</head>
+
+<body bgcolor="#e8e4d9">
+<div id="center">
+    <div id="sucesso">
+  		<h2>Sucesso!</h2>
+        
+        Confira seus dados cadastrados:<br />
+        Nome: <span class="lol"><?php echo $v_params["nome"]; ?></span> <br />
+        Login: <span class="lol"><?php echo $v_params["id"]; ?></span><br />
+        Senha: <span class="lol"><?php echo $v_params["senha"]; ?></span><br />
+        Email: <span class="lol"><?php echo $v_params["email"]; ?></span><br />
+        Data Nascimento: <span class="lol"><?php echo $v_params["nasc"]; ?></span><br /><br />
+        <p></p>
+       <!-- Para concluir totalmente o cadastro é necessário a <strong>confirmação no seu email</strong>. <br />
+        Lhe enviamos um email com o link de confirmação!  	
+        --> <strong>NOTA: Ao criar um char é necessário relogar!</strong>
+    </div>
+</div>
+</body>
+</html>

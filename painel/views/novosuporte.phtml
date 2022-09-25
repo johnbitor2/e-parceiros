@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Painel E-PARCEIROS - Suporte</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/novosuporte.css" />
+</head>
+
+<body>
+<?php 
+    require_once 'views/topo.phtml';
+    require_once 'views/menu.phtml';
+?>
+    
+<div id="todo">
+<h3>Novo Suporte</h3><p>
+<form method="post" name="suporte" enctype="multipart/form-data" action="/Painel/suporte/novo/acao/novo">
+  Assunto:<br />
+  <input type="text" name="assunto" class="assunto" maxlength="100"/>  
+  <p>
+  <textarea name="texto" cols="45" rows="5"></textarea>
+  <br />
+  <span style="font-size:12px; color:#8e8e8e;">Para um suporte mais eficiente, escreva o máximo de informações possíveis, tal como data e hora do ocorrido, envolvidos e itens perdidos(se tiverem).</span>
+
+  <p style="display:inline">
+  <input id="uploadFile" placeholder="Escolha um arquivo" disabled="disabled" />
+  </p>
+    <div class="fileUpload btn btn-primary">
+        
+        <span>Upload</span>
+        <input id="uploadBtn" name="imagem" type="file" class="upload" />
+        
+    </div><br />
+    <span style="font-size:12px; color:#8e8e8e;"> Se necessário, faça um upload de uma imagem(extensões aceitas: bmp,jpeg e png).</span>
+    <script>
+document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
+	</script>
+ 
+ <p>
+ <input type="submit" name="Enviar" value="Enviar" class="enviar" />
+</form>
+</div>
+
+
+    
+</div>
+</div>
+</div>
+</body>
+</html>

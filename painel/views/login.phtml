@@ -1,0 +1,43 @@
+<?php
+    $v_params = $this->getParams();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Painel E-PARCEIROS - Login</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/login.css" />
+</head>
+
+<body bgcolor="#e8e4d9">
+<div id="center">
+<div id="bar"></div>
+<div id="">
+<div id=""></div>
+</div>
+  <form method="post" action="/Painel/index/login">
+<div class="main_input_box">  
+    <?php if(isset($v_params["cadastro"]) && $v_params["cadastro"] = "sucesso") { ?>
+    <span style="color:#0C0;">Conta validada com sucesso!</span><br><br>
+    <?php } ?>
+<span class="add-on bg_lg">&nbsp;</span>
+<input type="text" name="login" placeholder="Usuário" /> 
+</div>
+<div class="main_input_box">  
+<span class="add-on bg_lg2">&nbsp;</span>
+    <input type="password" name="senha" placeholder="Senha" />
+</div>
+
+<div id="bar"></div>
+<div id="buttons">
+    <input type="submit"value="" class="bt_entrar" />
+    <a href="/Painel/index/cadastra/"><input type="button"value="" class="bt_cadastra" /></a>
+</div>
+<br /><br />
+<span style="color:#8a8a8a; font-family:Arial, Helvetica, sans-serif; font-size:14px; margin-top:2px; padding-top:2px; float:right;">
+    Não consegue acessar? <a href="#" class="clique">Clique aqui</a> para recuperar seus dados.
+</span>
+  </form>
+</div>
+</body>
+</html>

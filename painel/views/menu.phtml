@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/menu.css" />
+<script src="/Paineltemplate/jquery-1.10.2.min.js"></script>
+<script src="/Painel/template/jquery-ui.js"></script>
+  <script>
+		$(document).ready(function() {
+			$("#menu_item.slideloja").click( function() {
+				$("#menu_subitem2.slideloja").slideToggle(350);
+			});//end 
+			$("#menu_item.slidesuporte").click( function() {
+				$("#menu_subitem2.slidesuporte").slideToggle(350);
+			});//end 
+		});//end doc ready
+
+  </script>
+</head>
+
+<body>
+<div id="gambs">
+<div id="conteudo">
+
+<div id="menu">
+	<div id="menu_topo"></div>
+      <a href="/Painel/Id/mostrar/"><div id="menu_item">Principal</div></a>
+      <a href="/Painel/Char/listar/"><div id="menu_item">Personagens</div></a>
+      <div id="menu_item" class="slideloja">Loja</div>
+      <div id="menu_subitem2" class="slideloja">
+      	<a href="/Painel/Loja/premiuns/"><div id="menu_subitem">Premiuns</div></a>
+      	<a href="/Painel/Loja/diversos/"><div id="menu_subitem">Diversos</div></a>
+      	<a href="/Painel/Loja/cristais/"><div id="menu_subitem">Cristais</div></a>
+      	<a href="/Painel/Loja/aging/"><div id="menu_subitem">Aging</div></a>
+        <a herf='#'><!--href="/Painel/Loja/promocionais/"--> <div id="menu_subitem">Itens Promocionais</div></a>
+      	<a href="/Painel/Loja/extrato/"><div id="menu_subitem">Extrato</div></a>
+      </div>
+      <!--<div id="menu_item">Loteria</div>-->
+      <div id="menu_item" class="slidesuporte">Suporte</div>
+      <div id="menu_subitem2" class="slidesuporte">
+          <a href='#'><!--href="/Painel/Suporte/listar/"--> <div id="menu_subitem">Lista Suporte</div></a>
+          <a href='#'><!--href="/Painel/Suporte/novo/"--> <div id="menu_subitem">Novo Suporte</div></a>
+      </div>
+      <div id="menu_item">Alterar Dados</div>
+      <a href="/Painel/index/logout"><div id="menu_item">Sair</div></a>
+</div>
+
+<div id="conteudo2">
+    
+    
+    
+

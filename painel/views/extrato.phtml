@@ -1,0 +1,46 @@
+<?php
+    $v_params = $this->getParams();
+    $v_extrato = $v_params["extrato"];
+    $msg = $v_params["msg"];
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Painel E-PARCEIROS - Personagens</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/extrato.css" />
+</head>
+<body>
+<?php 
+    require_once 'views/topo.phtml';
+    require_once 'views/menu.phtml';
+?>
+<div id="todo">
+    <h3>Extrato de Compras</h3><p>
+    <?php if($msg != null){ ?>
+        <div id="msg<?php echo $msg[0]; ?>"><?php echo $msg[1]; ?></div><p>
+    <?php } ?>
+    <table>
+        <tr>
+            <td bgcolor="#DDDDDD" width="300" align="center">Item Adquirido</td>
+            <td bgcolor="#DDDDDD" width="100" align="center">Valor</td>
+            <td bgcolor="#DDDDDD" width="100" align="center">Data</td></tr>
+        <?php 
+            foreach ($v_extrato as $o_extrato)
+            {
+        ?>
+        <tr>
+            <td bgcolor="#f2f2f2" width="300" align="center"><?php echo $o_extrato->getSt_nome(); ?></td>
+            <td bgcolor="#f2f2f2" width="100" align="center"><?php echo $o_extrato->getIn_valor(); ?></td>
+            <td bgcolor="#f2f2f2" width="100" align="center"><?php echo date("d/m/Y",strtotime($o_extrato->getDt_data())); ?></td>
+        </tr>
+        <?php } ?>
+    </table>
+</div>
+    
+    
+</div>
+</div>
+</div>
+</body>
+</html>

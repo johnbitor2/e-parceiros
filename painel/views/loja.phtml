@@ -1,0 +1,57 @@
+<?php
+    $v_params = $this->getParams();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Painel E-PARCEIROS - Personagens</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/loja.css" />
+</head>
+<body>
+<?php 
+    require_once 'views/topo.phtml';
+    require_once 'views/menu.phtml';
+?>
+<script>
+function confirmaCompra(str) {        
+   if (confirm("Tem certeza que deseja comprar este item?")) {        
+        location.href="/Painel/Loja/compra/item/" + str;         
+   }        
+} 
+</script>
+<div id="todo">
+    <h3>Loja</h3><p>
+        
+    <div id="loja_aviso">
+    <a href="http://E-PARCEIROS.net/index.php?page=doacao"><strong>Faça uma Doação</strong></a> e adquira ECoins para compras em nossa loja!
+    </div>
+        
+        <?php foreach($v_params as $item) { ?>
+        <div id="item">
+            <div id="imgbox"><img src="<?php echo $item->getSt_img(); ?>" /></div>
+            <div id="separador"></div>
+            <div id="nome"><?php echo $item->getSt_nome(); ?></div>
+            <div id="descricao"><?php echo $item->getSt_desc(); ?></div>
+            <div id="ecoin">
+                <?php 
+                    if(($item->getIn_promocao() == 1) || 
+                            (strtotime($item->getDt_promo_data()) >= strtotime(date("Y-m-d"))))
+                    {
+                        echo '<span style="color:#00EE00;">'.$item->getIn_preco_promo().'</span>';
+                    }else {
+                        echo $item->getIn_preco();
+                    }
+                ?>
+            </div>
+            <a href="#" onclick="confirmaCompra('<?php echo base64_encode($item->getSt_nome()); ?>');"><div id="compra"></div></a>
+        </div>
+        <?php } ?>
+</div>
+    
+    
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?php 
+    $v_params = $this->getParams();
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>E-PARCEIROS - Account validation</title>
+</head>
+<body>
+  <div style="width: 640px; font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+      <h2>Bem vindo ao</h2>
+    
+    <a href="http://E-PARCEIROS.net"><img src="http://E-PARCEIROS.net/imgs/logo.png" alt="E-PARCEIROS rocks"></a>
+    
+    <p>Para terminar de validar sua conta clique no link abaixo:<br/>
+        <i>To confirm your email address, please click the link below:</i></p>
+    <p>
+        <a href="<?php echo $v_params["link"]; ?>">Clique aqui(click here)</a>
+    </p>
+    <p>
+    <strong>
+    Nao responda esse email!<br/>
+    <i>Do not Reply this email!</i>
+    </strong>
+    </p>
+  </div>
+</body>
+</html>

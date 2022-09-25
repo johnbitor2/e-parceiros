@@ -1,0 +1,45 @@
+<?php
+    $v_params = $this->getParams();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Painel E-PARCEIROS - Suporte</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/suporte.css" />
+</head>
+
+<body>
+<?php 
+    require_once 'views/topo.phtml';
+    require_once 'views/menu.phtml';
+?>
+
+<div id="todo">
+    <h3>Lista Suporte</h3><p>
+    <span style="color:#8e8e8e; font-size:14px;">
+    Para acompanhar o andamento dos seus pedidos basta clicar sobre o título de cada suporte.
+    </span>
+
+    <div>
+        <?php 
+            foreach($v_params as $o_suporte){ 
+                if($o_suporte->getSt_status() == 3)
+                {
+        ?>
+                <div class="respondido"><span style="padding-left:5px;"><?php echo $o_suporte->getSt_assunto(); ?></span></div><div id="statusr"></div>
+            <?php }elseif($o_suporte->getSt_status() == 2){ ?>
+                <div class="aguardando"><span style="padding-left:5px;"><?php echo $o_suporte->getSt_assunto(); ?></span></div><div id="statusa"></div>
+            <?php }elseif($o_suporte->getSt_status() == 1){ ?>
+                <div class="finalizado"><span style="padding-left:5px;"><?php echo $o_suporte->getSt_assunto(); ?></span></div><div id="statusf"></div>
+            <?php }} ?>
+    </div>
+</div>
+    
+    
+    
+</div>
+</div>
+</div>
+</body>
+</html>

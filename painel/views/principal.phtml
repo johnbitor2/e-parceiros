@@ -1,0 +1,52 @@
+<?php
+    $v_params = $this->getParams();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/principal.css" />
+<title>Painel </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+
+<body>
+<?php 
+    require_once 'views/topo.phtml';
+    require_once 'views/menu.phtml';
+?>
+   
+<?php
+if($v_params["aviso"] != null && strlen($v_params["aviso"])>1)
+{
+?>
+<div id="aviso_topo"></div>
+<div id="aviso_meio">
+    <center>
+    <!--AVISO IMPORTANTE<br /><br />
+    Este aviso  />
+    <br />Att.-->
+    <?php echo $v_params["aviso"]; ?>
+    </center>
+</div>
+<div id="aviso_chao"></div>
+<div id="div"></div>
+<?php
+}
+?>
+<div id="infos">
+<h2>Informa&ccedil;&atilde;o da Conta</h2>
+ID: <?php echo $_SESSION["userData"]["em_id"]; ?><br />
+Email: <?php echo $_SESSION["userData"]["em_email"]; ?><br />
+Nome: <?php echo $_SESSION["userData"]["em_nome"]; ?><br />
+Data de nascimento: <?php echo date("d/m/Y",strtotime($_SESSION["userData"]["em_nasc"])); ?><br /><br /><br />
+Manteha seu email atualizado, em caso de perda de senha, enviaremos para seu email a nova<br />
+senha. A data de nascimento ser&aacute; necess&aacute;ria.
+
+</div>
+    
+    
+</div>
+</div>
+</div>
+</body>
+</html>

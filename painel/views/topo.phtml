@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Painel E-PARCEIROS</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/topo.css" />
+</head>
+
+<body >
+
+    <div id="topo">
+    	<div id="topo_barra">
+        	<div id="topo_infos">
+            	<span style="color:#FFF">ID:</span>
+            	<span style="color:#c5b768"><?php echo $_SESSION["userData"]["em_id"]; ?></span> &nbsp;
+            	<span style="color:#FFF">Email:</span>
+            	<span style="color:#c5b768"><?php echo $_SESSION["userData"]["em_email"]; ?></span>
+                <br />
+            	<span style="color:#FFF">ECoins:</span>
+            	<span style="color:#c5b768"><?php echo $_SESSION["userData"]["em_coins"]; ?></span> &nbsp;
+            	<span style="color:#FFF">Ultima vez ativo:</span>
+                <span style="color:#c5b768"><?php echo date("d M Y",strtotime($_SESSION["userData"]["em_lastlogin"])); ?></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

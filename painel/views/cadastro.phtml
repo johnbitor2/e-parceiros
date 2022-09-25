@@ -1,0 +1,70 @@
+<?php
+    $v_params = $this->getParams();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Painel e-PARCEIROS - Cadastro</title>
+<link rel="stylesheet" type="text/css" href="/Painel/template/css/cadastro.css" />
+<script src="/Painel/template/jquery-1.10.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="/Painel/template/validaform.js"></script>
+</head>
+
+<body bgcolor="#e8e4d9">
+<div id="center">
+    <form id="form1" name="form1" class="rounded" method="post" action="/Painel/index/cadastra">
+        <div id="">
+        <div id="></div>
+        </div>
+        <h2>Cadastro</h2>
+
+        <?php if($v_params != null){ ?>
+        <div class="erro">
+            <div id="msgerroT"></div>
+            <div id="msgerro"><?php foreach ($v_params as $erro)echo $erro."<br/>"; ?></div>
+            <div id="msgerroC"></div>
+        </div><p>
+        <?php } ?>
+        
+        <div class="field">
+            <label for="nome">Nome:</label>
+            <input type="text" class="input" name="nome" id="nome"  maxlength="100"/>
+            <p class="hint">Enter your name.</p>
+        </div>
+
+        <div class="field">
+            <label for="login">Login:</label>
+            <input type="text" class="input" name="login" id="login" maxlength="15"/>
+            <p class="hint">Enter your ID.</p>
+        </div>
+
+        <div class="field">
+            <label for="senha">Senha:</label>
+            <input type="password" class="input" name="senha" id="senha" maxlength="15"/>
+            <p class="hint">Enter your password.</p>
+        </div>
+
+        <div class="field">
+            <label for="senha2">Senha(repita):</label>
+            <input type="password" class="input" name="senha2" id="senha2" maxlength="15"/>
+            <p class="hint">Repeat your password.</p>
+        </div>
+
+        <div class="field">
+            <label for="email">Email:</label>
+            <input type="text" class="input" name="email" id="email"/>
+            <p class="hint">Enter your email.</p>
+        </div>
+
+        <div class="field">
+            <label for="nasc">Data Nascimento:</label>
+            <input type="text" class="input" name="nasc" id="nasc" placeholder="DD/MM/YYYY" maxlength="10" />
+            <p class="hint">Enter your birthdate.</p>
+        </div>
+
+        <input type="submit" name="Cadastrar"  class="button" value="Cadastrar" onclick="return validaCadastro()" />
+    </form>
+</div>
+</body>
+</html>
